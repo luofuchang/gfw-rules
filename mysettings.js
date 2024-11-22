@@ -195,18 +195,6 @@ function main(config) {
       "proxies": ["延迟选优"，"手动选择"],
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"
     },
-      ...groupBaseOption,
-      "name": "香港节点",
-      "type": "select",
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/embedded.svg"
-    },
-      ...groupBaseOption,
-      "name": "新加坡节点",
-      "type": "select",
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/embedded.svg"
-    },
     {
       ...groupBaseOption,
       "name": "手动选择",
@@ -227,6 +215,7 @@ function main(config) {
       "name": "谷歌服务",
       "type": "select",
       "proxies": ["节点选择", "延迟选优", "全局直连"],
+      "include-all": false,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"
     },
     {
@@ -234,6 +223,7 @@ function main(config) {
       "name": "国外媒体",
       "type": "select",
       "proxies": ["节点选择", "延迟选优"],
+      "include-all": false,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"
     },
     {
@@ -241,6 +231,7 @@ function main(config) {
       "name": "电报消息",
       "type": "select",
       "proxies": ["节点选择", "延迟选优"],
+      "include-all": false,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"
     },
     {
@@ -258,6 +249,7 @@ function main(config) {
       "name": "微软服务",
       "type": "select",
       "proxies": ["全局直连", "节点选择", "延迟选优"],
+      "include-all": false,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"
     },
     {
@@ -265,6 +257,7 @@ function main(config) {
       "name": "苹果服务",
       "type": "select",
       "proxies": ["节点选择", "延迟选优","全局直连"],
+      "include-all": false,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"
     },
     {
@@ -272,6 +265,7 @@ function main(config) {
       "name": "广告过滤",
       "type": "select",
       "proxies": ["REJECT", "DIRECT"],
+      "include-all": false,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bug.svg"
     },
     {
@@ -279,6 +273,7 @@ function main(config) {
       "name": "全局直连",
       "type": "select",
       "proxies": ["DIRECT", "节点选择"],
+      "include-all": false,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"
     },
     {
@@ -286,6 +281,7 @@ function main(config) {
       "name": "全局拦截",
       "type": "select",
       "proxies": ["REJECT", "DIRECT"],
+      "include-all": false,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg"
     },
     {
@@ -293,6 +289,7 @@ function main(config) {
       "name": "漏网之鱼",
       "type": "select",
       "proxies": ["节点选择", "全局直连"],
+      "include-all": false,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"
     }
   ];
