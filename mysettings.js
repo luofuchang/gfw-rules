@@ -199,9 +199,8 @@ function main(config) {
     },
     {
       ...groupBaseOption,
-      "name": "HK延迟选优",
-      "type": "url-test",
-      "tolerance": 100,
+      "name": "HK手动选择",
+      "type": "select",
       "include-all": true,
       "filter": "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$",
       "icon": "https://cdn.jsdelivr.net/gh/kissyouhunter/Tools@ce8aa69c7ddf5b38ad03c52cb02a92c0d4af56c4/icon/flags/icons8-hongkong.svg"
