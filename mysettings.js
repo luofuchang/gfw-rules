@@ -185,7 +185,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "节点选择",
       "type": "select",
-      "proxies": ["延迟选优","HK延迟选优","JP延迟选优","SG延迟选优"],
+      "proxies": ["延迟选优","HK手动选择","JP延迟选优","SG延迟选优"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"
     },
