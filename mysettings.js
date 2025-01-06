@@ -132,7 +132,7 @@ const ruleProviders = {
 // 规则
 const rules = [
   // 自定义规则
-  "IPCIDR,103.15.32.246,节点选择",
+  "IPCIDR,103.15.32.246/32,节点选择",
   "DOMAIN-SUFFIX,googleapis.cn,节点选择", // Google服务
   "DOMAIN-SUFFIX,gstatic.com,节点选择", // Google静态资源
   "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,节点选择", // Google Play下载服务
