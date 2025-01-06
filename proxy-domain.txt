@@ -1,0 +1,7 @@
+payload:
+  - 'luofuchang.com'
+  - 'media-amazon.com'
+  - 'amazon.com'
+  - 'google.com'
+  - 'github.com'
+  - 'githubusercontent.com.com'
