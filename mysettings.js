@@ -132,6 +132,7 @@ const ruleProviders = {
 // 规则
 const rules = [
   // 自定义规则
+  "DOMAIN-SUFFIX,micu.hk,DIRECT",
   "IP-CIDR,103.15.32.246/32,节点选择",
   "DOMAIN-SUFFIX,googleapis.cn,节点选择", // Google服务
   "DOMAIN-SUFFIX,gstatic.com,节点选择", // Google静态资源
