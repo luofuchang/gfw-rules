@@ -34,12 +34,6 @@ const ruleProviders = {
     url: "https://raw.githubusercontent.com/luofuchang/gfw-rules/refs/heads/master/unreachable.txt",
     path: "./ruleset/loyalsoldier/unreachable.yaml",
   },
-  google: {
-    ...ruleProviderCommon,
-    behavior: "domain",
-    url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt",
-    path: "./ruleset/loyalsoldier/google.yaml",
-  },
   proxy: {
     ...ruleProviderCommon,
     behavior: "domain",
