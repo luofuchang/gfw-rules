@@ -137,8 +137,6 @@ const rules = [
   "DOMAIN,v2rayse.com,节点选择", // V2rayse节点工具
   // Loyalsoldier 规则集
   "RULE-SET,proxycidr,节点选择",
-  "RULE-SET,unreachable,全局拦截",
-  "RULE-SET,reject,全局拦截",
   "RULE-SET,proxy,节点选择",
   "RULE-SET,direct,全局直连",
   "RULE-SET,private,全局直连",
@@ -146,6 +144,8 @@ const rules = [
   "RULE-SET,tld-not-cn,节点选择",
   "RULE-SET,applications,全局直连",
   "RULE-SET,telegramcidr,全局拦截,no-resolve",
+  "RULE-SET,unreachable,全局拦截",
+  "RULE-SET,reject,全局拦截",
   "RULE-SET,lancidr,全局直连,no-resolve",
   // 其他规则
   "GEOIP,LAN,全局直连,no-resolve",
