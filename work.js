@@ -174,7 +174,7 @@ function main(config) {
   }
 
   // 覆盖原配置中DNS配置
-  config["dns"] = dnsConfig;
+  //config["dns"] = dnsConfig;
 
   // 覆盖原配置中的代理组
   config["proxy-groups"] = [
