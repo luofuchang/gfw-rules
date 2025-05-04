@@ -14,36 +14,6 @@ const foreignNameservers = [
   "https://194.242.2.2/dns-query", // Mullvad(主)
   "https://194.242.2.3/dns-query", // Mullvad(备)
 ];
-// DNS配置
-const dnsConfig = {
-  enable: true,
-  listen: "0.0.0.0:1053",
-  ipv6: true,
-  "use-system-hosts": false,
-  "cache-algorithm": "arc",
-  "enhanced-mode": "fake-ip",
-  "fake-ip-range": "198.18.0.1/16",
-  "fake-ip-filter": [
-    // 本地主机/设备
-    "+.lan",
-    "+.local",
-    // Windows网络出现小地球图标
-    "+.msftconnecttest.com",
-    "+.msftncsi.com",
-    // QQ快速登录检测失败
-    "localhost.ptlogin2.qq.com",
-    "localhost.sec.qq.com",
-    // 微信快速登录检测失败
-    "localhost.work.weixin.qq.com",
-  ],
-  "default-nameserver": ["223.5.5.5", "119.29.29.29", "1.1.1.1", "8.8.8.8"],
-  nameserver: [...domesticNameservers, ...foreignNameservers],
-  "proxy-server-nameserver": [...domesticNameservers, ...foreignNameservers],
-  "nameserver-policy": {
-    "geosite:private,cn,geolocation-cn": domesticNameservers,
-    "geosite:google,youtube,telegram,gfw,geolocation-!cn": foreignNameservers,
-  },
-};
 // 规则集通用配置
 const ruleProviderCommon = {
   type: "http",
@@ -63,12 +33,6 @@ const ruleProviders = {
     behavior: "domain",
     url: "https://raw.githubusercontent.com/luofuchang/gfw-rules/refs/heads/master/unreachable.txt",
     path: "./ruleset/loyalsoldier/unreachable.yaml",
-  },
-  reject: {
-    ...ruleProviderCommon,
-    behavior: "domain",
-    url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt",
-    path: "./ruleset/loyalsoldier/reject.yaml",
   },
   google: {
     ...ruleProviderCommon,
@@ -127,7 +91,6 @@ const ruleProviders = {
 };
 // 规则
 const rules = [
-  "RULE-SET,google,谷歌服务",
   // 自定义规则
   "DOMAIN-SUFFIX,googleapis.cn,节点选择", // Google服务
   "DOMAIN-SUFFIX,gstatic.com,节点选择", // Google静态资源
@@ -145,7 +108,6 @@ const rules = [
   "RULE-SET,applications,全局直连",
   "RULE-SET,telegramcidr,全局拦截,no-resolve",
   "RULE-SET,unreachable,全局拦截",
-  "RULE-SET,reject,全局拦截",
   "RULE-SET,lancidr,全局直连,no-resolve",
   // 其他规则
   "GEOIP,LAN,全局直连,no-resolve",
@@ -172,9 +134,6 @@ function main(config) {
   if (proxyCount === 0 && proxyProviderCount === 0) {
     throw new Error("配置文件中未找到任何代理");
   }
-
-  // 覆盖原配置中DNS配置
-  //config["dns"] = dnsConfig;
 
   // 覆盖原配置中的代理组
   config["proxy-groups"] = [
